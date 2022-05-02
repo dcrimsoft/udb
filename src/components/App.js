@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import { BigNumber, ethers } from "ethers";
-import { BrowserRouter as Router, Routes, Switch, Route } from "react-router-dom";
 import getWeb3 from "./getWeb3";
 import Web3 from 'web3';
 import "./App.css";
@@ -95,139 +94,113 @@ class App extends Component {
 
   	render () {
 		return (
-				<div className="main_page">
+			<div className="main_page">					
 
-					
+				<nav className="navbar navbar-expand-lg navbar-light">
+					<div className="container">
+						<a className="navbar-brand" href="#">
+							<img src={ logo } alt="logo"></img>
+						</a>
+						<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span className="navbar-toggler-icon"></span>
+						</button>
 
-					<nav className="navbar navbar-expand-lg navbar-light">
-						<div className="container">
-							<a className="navbar-brand" href="#">
-								<img src={ logo }></img>
-							</a>
-							<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span className="navbar-toggler-icon"></span>
-							</button>
-
-							<div className="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul className="navbar-nav ml-auto">
-									<li className="nav-item active">
-										<a className="nav-link" href="#">Home</a>
-									</li>
-									<li className="nav-item">
-										<a className="nav-link" href="#">Features</a>
-									</li>
-									<li className="nav-item">
-										<a className="nav-link" href="#">My Weapons</a>
-									</li>
-									<li className="nav-item">
-										<a className="nav-link" href="#">Wagyu Games</a>
-									</li>
-									<li className="nav-item">
-										<a className="nav-link" href="#"></a>
-									</li>
-								</ul>
+						<div className="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul className="navbar-nav ml-auto">
+								<li className="nav-item active">
+									<a className="nav-link" href="#">Home</a>
+								</li>
+								<li className="nav-item">
+									<a className="nav-link" href="#">Features</a>
+								</li>
+								<li className="nav-item">
+									<a className="nav-link" href="#">My Weapons</a>
+								</li>
+								<li className="nav-item">
+									<a className="nav-link" href="#">Wagyu Games</a>
+								</li>
+								<li className="nav-item">
+									<a className="nav-link" href="#"></a>
+								</li>
+							</ul>
 
 
-								<WalletCard />
-								
-							</div>
-
-							
+							<WalletCard />
 							
 						</div>
+
 						
 						
-					</nav>
+					</div>
+					
+					
+				</nav>
+
+					
+					
+				
 
 
-					<div className="m_content">
-
-
+				<div className="m_content">
 					<div className="c_slider">
-							<div className="slider_d">
-								<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
+						<div className="slider_d">
+							<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="false">
 						
 						
-
-						
-                            { this.state.loading
-                                ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div> 
-                                : <Main
-                                    products={this.state.products}
-                                    createProduct={this.createProduct}
-                                    purchaseProduct={this.purchaseProduct} />
-                            }
+								{ this.state.loading
+									? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div> 
+									: <Main
+										products={this.state.products}
+										createProduct={this.createProduct}
+										purchaseProduct={this.purchaseProduct} />
+								}
 
 
-						</div>
 							</div>
+						</div>
 							
+					</div>
+
+					<div className="grid-container">
+						<div className="item2 udb1">
+							<img className="udb" src={ udb } alt=''></img>
+						</div>
+						<div className="item3">
+							<h6>INTRODUCING THE WEAPONS MINTING GUIDE</h6>
+							<p>
+								Read our Medium guide and learn how minting works.
+							</p>
+						</div>
+						<div className="item4">
+							<button className="button" id="ra_btn">
+								<span>Read Article </span>
+							</button>
+						</div>
+					</div>
+
+					<div className="me_weapons">
+						<div className="header">
+							<h1>My Weapons</h1>
+							<p>
+								Weapon loadouts found in your connected wallet will appear here.
+							</p>
 						</div>
 
-
-
-					<div>
-                
-
-                                   
-            </div>
-
-
-
-
-					
 						
 
-
-
-
-
-
-
-
-
-
-
-						<div className="grid-container">
-							<div className="item2 udb1">
-								<img className="udb" src={ udb }></img>
-							</div>
-							<div className="item3">
-								<h6>INTRODUCING THE WEAPONS MINTING GUIDE</h6>
-								<p>
-									Read our Medium guide and learn how minting works.
-								</p>
-							</div>
-							<div className="item4">
-								<button className="button" id="ra_btn">
-									<span>Read Article </span>
-								</button>
-							</div>
-						</div>
-
-						<div className="me_weapons">
-							<div className="header">
-								<h1>My Weapons</h1>
-								<p>
-									Weapon loadouts found in your connected wallet will appear here.
-								</p>
-							</div>
-
-							
-
-							<div className="main">
-								<div className="row">
-									<div className="column" onClick={ scrollToTop }>
-										<img className="icon_img" src={ add_icon }></img>                                
-									</div>
-									<div className="column" onClick={ scrollToTop }>
-										<img className="icon_img" src={ add_icon }></img>
-									</div>
+						<div className="main">
+							<div className="row">
+								<div className="column" onClick={ scrollToTop }>
+									<img className="icon_img" src={ add_icon } alt='my weapons'></img>                                
+								</div>
+								<div className="column" onClick={ scrollToTop }>
+									<img className="icon_img" src={ add_icon } alt='my weapons'></img>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		);
   	}
 

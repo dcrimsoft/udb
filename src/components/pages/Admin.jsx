@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Marketplace from '../abis/Marketplace.json';
+import Marketplace from '../../abis/Marketplace.json';
 import Web3 from 'web3';
 
-class Iv_admin extends Component {
+class Admin extends Component {
     state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
     async UNSAFE_componentWillMount() {
@@ -129,4 +129,4 @@ class Iv_admin extends Component {
 
 }
 
-export default Iv_admin;
+export default Admin;
