@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "611fc72f24d447bf5c28",
-    "url": "/udb/static/css/main.0bff0073.chunk.css"
+    "revision": "f2f470932c1d7506dde3",
+    "url": "/udb/static/css/main.cf02fbb2.chunk.css"
   },
   {
-    "revision": "611fc72f24d447bf5c28",
-    "url": "/udb/static/js/main.611fc72f.chunk.js"
+    "revision": "f2f470932c1d7506dde3",
+    "url": "/udb/static/js/main.f2f47093.chunk.js"
   },
   {
     "revision": "0bfef701d90e87fcc1a7",
@@ -36,7 +36,15 @@ self.__precacheManifest = [
     "url": "/udb/static/media/z_killer.aef0822e.PNG"
   },
   {
-    "revision": "063fe0978bd082f98b87028f127c80a6",
+    "revision": "0e7bc5750f71095e9d42c958aa2d0c4b",
+    "url": "/udb/static/media/amateur.0e7bc575.PNG"
+  },
+  {
+    "revision": "118fd46f5dd181e185ceba4b177ecd7d",
+    "url": "/udb/static/media/main_bg.118fd46f.jpg"
+  },
+  {
+    "revision": "0ce23e22885ee5f51ecfbcc858a4ab31",
     "url": "/udb/index.html"
   }
 ];
