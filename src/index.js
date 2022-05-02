@@ -1,12 +1,20 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.css'
-import App from './components/App';
+import App from './components/App.js';
 import * as serviceWorker from './serviceWorker';
+import Iv_admin from './components/Iv_admin';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { BrowserRouter as Router, Routes, Switch, Route } from "react-router-dom";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+
+ReactDOM.render(
+    <Router>
+        <Routes>
+            <Route path="/" element={ <App /> } />
+            <Route path="/abt/IV_Admin" element={ <Iv_admin /> } />
+        </Routes>
+    </Router>, 
+document.getElementById('root'));
+
 serviceWorker.unregister();
