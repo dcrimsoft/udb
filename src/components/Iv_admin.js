@@ -67,63 +67,63 @@ class Iv_admin extends Component {
 
     render () {
         return (
-                <div className='adm_body' id="content">
-                    
+            <div className='adm_body' id="content">
+                
 
-                    <div className='form_div'>
-                        <div className='admin_title'>
-                            <h3>Add Weapons</h3>
-                        </div>
-                    
-                        <form onSubmit={ (event) => {
-                            event.preventDefault()
-                            const name = this.productName.value
-                            const price = window.web3.utils.toWei(this.productPrice.value.toString(), 'Ether')
-                            const perks = this.weaponPerks.value
-                            this.createWeapon(name, price, perks);
-                        } }>
-                            <div className="form-group mr-sm-2">
-                                <input
-                                    id="productName"
-                                    ref={(input) => { this.productName = input }}
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="weapon name"
-                                    required />
-                            </div>
-
-                            <div className="form-group mr-sm-2">
-                                <input
-                                    id="productPrice"
-                                    type="text"
-                                    ref={(input) => { this.productPrice = input }}
-                                    className="form-control"
-                                    placeholder="weapon price (in ether)"
-                                    required />
-                            </div>
-
-                            <div className="form-group mr-sm-2">
-                                <input
-                                    id="weaponPerks"
-                                    type="text"
-                                    ref={(input) => { this.weaponPerks = input }}
-                                    className="form-control"
-                                    placeholder="weapon perks"
-                                    required />
-                            </div>
-
-                            <div className='add_btn'>
-                                <button type="submit" id='btn-primary' className="btn btn-primary">
-                                    Add Weapon
-                                </button>
-                            </div>
-
-                            
-
-                        </form>
+                <div className='form_div'>
+                    <div className='admin_title'>
+                        <h3>Add Weapons</h3>
                     </div>
-                    
+                
+                    <form onSubmit={ (event) => {
+                        event.preventDefault()
+                        const name = this.productName.value
+                        const price = window.web3.utils.toWei(this.productPrice.value.toString(), 'Ether')
+                        const perks = this.weaponPerks.value
+                        this.createWeapon(name, price, perks);
+                    } }>
+                        <div className="form-group mr-sm-2">
+                            <input
+                                id="productName"
+                                ref={(input) => { this.productName = input }}
+                                type="text"
+                                className="form-control"
+                                placeholder="weapon name"
+                                required />
+                        </div>
+
+                        <div className="form-group mr-sm-2">
+                            <input
+                                id="productPrice"
+                                type="text"
+                                ref={(input) => { this.productPrice = input }}
+                                className="form-control"
+                                placeholder="weapon price (in ether)"
+                                required />
+                        </div>
+
+                        <div className="form-group mr-sm-2">
+                            <input
+                                id="weaponPerks"
+                                type="text"
+                                ref={(input) => { this.weaponPerks = input }}
+                                className="form-control"
+                                placeholder="weapon perks"
+                                required />
+                        </div>
+
+                        <div className='add_btn'>
+                            <button type="submit" id='btn-primary' className="btn btn-primary">
+                                Add Weapon
+                            </button>
+                        </div>
+
+                        
+
+                    </form>
                 </div>
+                
+            </div>
         );
     }
 
