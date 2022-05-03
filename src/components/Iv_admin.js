@@ -72,7 +72,7 @@ class Iv_admin extends Component {
 
                     <div className='form_div'>
                         <div className='admin_title'>
-                            <h3>Add Product</h3>
+                            <h3>Add Weapons</h3>
                         </div>
                     
                         <form onSubmit={ (event) => {
