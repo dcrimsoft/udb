@@ -77,7 +77,7 @@ const WalletCard = () => {
  
   
                     <div className="text-center">                        
-                        <span className='u_bal'><i className="fa fa-check"></i> Wallet Connected... Bal: {data.Balance} ETH</span>
+                        <span className='u_bal'><i className="fa fa-check"></i> Wallet Connected... Bal: { parseFloat(data.Balance).toFixed(2) } ETH</span>
                     </div>
                 </div>
             
